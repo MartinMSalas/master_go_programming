@@ -53,6 +53,8 @@ func main() {
 
 	// Function Type
 	fmt.Printf("%T\n", f)
+
+	
 }
 
 func f() {}
