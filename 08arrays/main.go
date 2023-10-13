@@ -44,4 +44,6 @@ func main() {
 	fmt.Printf("%#v\n", grades)
 	weekend := [7]bool{5: true, 6: true}
 	fmt.Printf("%#v\n", weekend)
+
+	
 }
