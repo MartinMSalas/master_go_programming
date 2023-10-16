@@ -3,10 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	var cities []string
-	fmt.Printf("%#v\n", cities)
+	//var cities []string
+	//fmt.Printf("%#v\n", cities)
 
-	cities = []string{"Paris", "London", "Tokyo", "Catamarca", "Cordoba"}
+	cities := []string{"Paris", "London", "Tokyo", "Catamarca", "Cordoba"}
 
 	fmt.Printf("%#v\n", cities)
 	cities[4] = "New York"
