@@ -3,45 +3,72 @@ package main
 import "fmt"
 
 func main() {
-	//var cities []string
-	//fmt.Printf("%#v\n", cities)
+	
+	var number [5]int;
 
-	cities := []string{"Paris", "London", "Tokyo", "Catamarca", "Cordoba"}
+	fmt.Printf("%v\n", number)
+	fmt.Printf("%#v\n", number)
 
-	fmt.Printf("%#v\n", cities)
-	cities[4] = "New York"
-	fmt.Printf("%#v\n", cities)
+	var a1 = [3]int{1, 2, 3}
 
-	for index, value := range cities {
-		fmt.Printf("cities: %d is %s\n", index, value)
+	fmt.Printf("%v\n", a1)
+	fmt.Printf("%#v\n", a1)
+
+
+	a3 := [...]int{1, 2, 3}
+	fmt.Printf("%v\n", a3)
+
+	fmt.Printf("%#v\n", a3)
+	fmt.Printf("Length: %d\n", len(a3))
+
+	a5 := [...]float64{67.7, 89.8, 21, 78,}
+	fmt.Printf("%#v\n", a5)
+	fmt.Println(a5)
+
+	for i, v :=  range a5 {
+		fmt.Printf("%d the element of a5 is %.2f\n", i, v)
 	}
 
-	var n []int
-	fmt.Println(n == nil)
-
-	m := []int{}
-	fmt.Println(m == nil)
-	fmt.Println(m)
-	a, b := []int{1, 2, 3}, []int{1, 2, 3, 4}
-	fmt.Println(len(a) + len(b))
-
-	var eq bool = true
-
-	if len(a) != len(b) {
-		eq = false
-	} else {
-
-		for i := range a {
-			if a[i] != b[i] {
-				eq = false
-				break
-			}
-		}
-	}
-	if eq {
-		fmt.Println("equal")
-	} else {
-		fmt.Println("not equal")
+	for i := 0; i < len(a5); i++ {
+		fmt.Printf("%d the element of a5 is %.2f\n", i, a5[i])
 	}
 
+	balances := [2][3]int{
+		{5,6,7},
+		{8,9,10},
+	}
+	fmt.Println(balances)
+
+	m := [3]int{1, 2, 3}
+	n := m
+	fmt.Println(m, n)
+	n[0] = 100
+	fmt.Println(m, n)
+	fmt.Printf("m: %p\n", &m)
+
+	grades := [3]int{
+		1: 10,
+		0: 5,
+		2: 7,
+
+	}
+	fmt.Println(grades)
+
+	accounts := [3]int{2: 50}
+	fmt.Println(accounts)
+
+	names := [...]int{
+		5: 1,
+	}
+	fmt.Println(names, len(names))
+	cities := [...]string{
+		5: "Paris",
+		"Catamarca",
+		"New York",
+		1: "London",
+	}
+	for i,v := range cities {
+		fmt.Printf("%d the element of a5 is %s\n", i, v)
+	}	
+	fmt.Println(cities, len(cities))
 }
